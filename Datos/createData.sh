@@ -1,8 +1,6 @@
 #!/bin/bash
 
 for fileName in `ls | sed 's/createData.sh//'`; do
-	echo $fileName
-	while IFS= read -r LINE || [ -n "$LINE" ]; do
-    	echo "$LINE"
-	done < $fileName
+	echo "parseando $fileName"
+	sed -i -e "s/\t/ /g" -i -e "s/\r//g" -i -e "s/\([a-zA-Z]*\)//gw datos.txt" $fileName 
 done; 
