@@ -7,6 +7,7 @@
 //============================================================================
 
 #include "../Headers/Model/Muestra.h"
+#include <mgl2/mgl.h>
 
 using namespace std;
 
@@ -17,6 +18,9 @@ int main() {
 	for(map<Date,pair<float,float> >::iterator it = datos->begin(); it != datos->end(); ++it){
 		cout << it->second.first<<"\n";
 	}*/
+	  mglGraph gr;
+	  gr.FPlot("sin(pi*x)");
+	  gr.WriteFrame("test.png");
 	cout << "tp---taller" << endl; // prints tp---taller
 	return 0;
 }
