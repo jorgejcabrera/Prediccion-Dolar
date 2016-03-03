@@ -1,12 +1,12 @@
 /*
- * Muestra.h
+ * DolarSample.h
  *
  *  Created on: 2 de mar. de 2016
  *      Author: jorge
  */
 
-#ifndef MUESTRA_H_
-#define MUESTRA_H_
+#ifndef DOLAR_SAMPLE_H_
+#define DOLAR_SAMPLE_H_
 
 #include "../../Headers/Utils/Date.h"
 
@@ -15,16 +15,16 @@
 
 using namespace std;
 
-class Muestra {
+class DolarSample {
 	private:
 		/*
 		 * el primer campo del valor corresponde al precio de compra y el segundo al precio de venta
 		 * */
-		map<Date,pair<float,float> > muestra;
+		map<Date,pair<float,float> > dolarSample;
 	public:
-		Muestra(string path);
+		DolarSample(string path);
 		map<Date,pair<float,float> >* getData();
-		virtual ~Muestra();
+		virtual ~DolarSample();
 };
 
-#endif /* MUESTRA_H_ */
+#endif /* DOLAR_SAMPLE_H_ */
