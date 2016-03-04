@@ -13,14 +13,28 @@ MathGl::MathGl() {
 
 //TODO ver como inicializar los valores de la funcion. Son los datos que están en dolarSample
 void MathGl::drawData(map<Date,pair<float,float> >* dolarSample){
-	mglData y(30,30);						//es la función que vamos a dibujar
-	gr->SubPlot(1,1,0,"");					//ancho, alto e ubicación del gráfico
+	//función que vamos a dibujar
+	mglData y;
+	//TODO esto puede llegar a ser muy ineficiente si nuestra muestra es muy grande
+	double* a = new double[dolarSample->size()];
+	int i = 0;
+	for(map<Date,pair<float,float> >::iterator itDolarCompra = dolarSample->begin(); itDolarCompra != dolarSample->end(); ++itDolarCompra){
+		a[i] = itDolarCompra->second.first;
+		i++;
+	}
+	//le cargamos a la funcion los valores. La función link a diferencia de Set no copia los datos sino que se guarda un puntero al array
+	y.Link(a,dolarSample->size());
+	//configuración de la imagen
 	gr->Title("Valor del Peso / Fecha");
+	gr->SetRanges(0,20,0,20,10);
+	gr->SubPlot(1,1,0,"");
 	gr->Label('x',"x");
 	gr->Label('y',"y");
-	gr->Axis();								//colocamos las subdivisiones en los ejes
+	//colocamos las subdivisiones en los ejes
+	gr->Axis();
 	gr->Box();
-	gr->Plot(y,"+");						//genera el gráfico
+	//genera el gráfico
+	gr->Plot(y,"+");
 	gr->WriteFrame("test.png");
 }
 

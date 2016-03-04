@@ -21,6 +21,8 @@ class Date {
 	public:
 		Date();
 		string toString();
+		int toInteger();
+		float toFloat();
 		void loadDate(string sDate);
 	    bool operator < (const Date& a) const{
 	        return ( year < a.year || ( month < a.month && year == a.year) || (day < a.day && month == a.month && year == a.year));

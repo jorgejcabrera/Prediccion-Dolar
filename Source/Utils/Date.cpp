@@ -9,13 +9,24 @@
 
 Date::Date() {
 	day = month = year = 0;
-
 }
 
 string Date::toString(){
 	stringstream ss;
 	ss << day << "/"<<month << "/" <<year;
 	return ss.str();
+}
+
+int Date::toInteger(){
+	stringstream ss;
+	ss << year << month << day;
+	return atoi(ss.str().c_str());
+}
+
+float Date::toFloat(){
+	stringstream ss;
+	ss << year << month << day;
+	return atof(ss.str().c_str());
 }
 
 void Date::loadDate(string sDate){
