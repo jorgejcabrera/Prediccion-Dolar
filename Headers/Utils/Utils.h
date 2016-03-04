@@ -8,11 +8,14 @@
 #ifndef UTILS_H_
 #define UTILS_H_
 
+#include <mgl2/mgl.h>
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include <map>
 using namespace std;
 
 class Utils {
