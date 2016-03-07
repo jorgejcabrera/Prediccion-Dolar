@@ -28,6 +28,7 @@ void MathGl::drawData(map<Date,pair<float,float> >* sample,string title){
 	gr.SetRanges(12000e5,14500e5,0,20);
 	gr.SetTicksTime('x',0);
 	gr.Axis();
+	gr.Grid("!","h=");
 	gr.Box("r");
 	//genera el gráfico
 	gr.Plot(y);
