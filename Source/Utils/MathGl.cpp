@@ -25,10 +25,9 @@ void MathGl::drawData(map<Date,pair<float,float> >* sample,string title){
 	//configuración de la imagen
 	gr.SubPlot(1,1,0,"");
 	gr.Title(title.c_str());
-	gr.SetRanges(12000e5,14500e5,0,25);
+	gr.SetRanges(12000e5,14500e5,0,20);
 	gr.SetTicksTime('x',0);
-	gr.SetOrigin(0,0);
-	gr.Axis("xy");
+	gr.Axis();
 	gr.Box("r");
 	//genera el gráfico
 	gr.Plot(y);
