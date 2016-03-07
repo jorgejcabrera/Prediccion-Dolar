@@ -23,9 +23,11 @@ void MathGl::drawData(map<Date,pair<float,float> >* sample,string title){
 	//le cargamos a la funcion los valores. La función link a diferencia de Set no copia los datos sino que se guarda un puntero al array
 	y.Link(a,sample->size());
 	//configuración de la imagen
-	gr.Title(title.c_str());
-	gr.SetRanges(0,25,0,25);
 	gr.SubPlot(1,1,0,"");
+	gr.Title(title.c_str());
+	gr.SetRanges(12000e5,14500e5,0,25);
+	gr.SetTicksTime('x',0);
+	gr.SetOrigin(0,0);
 	gr.Axis("xy");
 	gr.Box("r");
 	//genera el gráfico

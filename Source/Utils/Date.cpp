@@ -36,6 +36,18 @@ void Date::loadDate(string sDate){
 	this->year = atoi((*(tokens.begin()+2)).c_str());
 }
 
+int Date::getDay(){
+	return this->day;
+}
+
+int Date::getMonth(){
+	return this->month;
+}
+
+int Date::getYear(){
+	return this->year;
+}
+
 Date::~Date() {
 	// TODO Auto-generated destructor stub
 }
