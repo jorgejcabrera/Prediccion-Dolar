@@ -13,8 +13,8 @@ using namespace std;
 int main() {
 	DolarSample* dolarSample = new DolarSample("/home/jorge/Escritorio/Prediccion-Dolar/Datos/datos.txt");
 	map<Date,pair<float,float> >* dataDolar = dolarSample->getData();
-	MathGl* mathGl = new MathGl();
-	mathGl->drawData(dataDolar);
+	MathGl mathGl;
+	mathGl.drawData(dataDolar,"Datos del dolar");
 	cout << "tp---taller" << endl; // prints tp---taller
 	return 0;
 }

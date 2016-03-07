@@ -14,10 +14,11 @@ using namespace std;
 
 class MathGl {
 	private:
-		mglGraph* gr;
+		mglGraph gr;
 	public:
 		MathGl();
-		void drawData(map<Date,pair<float,float> >* dolarSample);
+		void drawData(map<Date,pair<float,float> >* sample,string title);
+		void compareDate();
 		virtual ~MathGl();
 };
 
