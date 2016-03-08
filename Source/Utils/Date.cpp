@@ -11,6 +11,11 @@ Date::Date() {
 	day = month = year = 0;
 }
 
+double Date::getDate(){
+	return this->day + (this->year - 70) * 31536000 + ((this->year-69)/4)*86400 - ((this->year-1)/100)*86400 + ((this->year+299)/400)*86400;
+}
+
+
 string Date::toString(){
 	stringstream ss;
 	ss << day << "/"<<month << "/" <<year;

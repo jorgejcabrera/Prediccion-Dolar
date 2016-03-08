@@ -10,7 +10,6 @@
 MathGl::MathGl() {
 }
 
-//TODO ver como inicializar los valores de la funcion. Son los datos que están en sample
 void MathGl::drawData(map<Date,pair<float,float> >* sample,string title){
 	mglData y;
 	//TODO esto puede llegar a ser muy ineficiente si nuestra muestra es muy grande
@@ -20,7 +19,7 @@ void MathGl::drawData(map<Date,pair<float,float> >* sample,string title){
 		a[i] = itDolarCompra->second.second;
 		i++;
 	}
-	//le cargamos a la funcion los valores. La función link a diferencia de Set no copia los datos sino que se guarda un puntero al array
+	//cargamos a la funcion los valores
 	y.Link(a,sample->size());
 	//configuración de la imagen
 	gr.SubPlot(1,1,0,"");

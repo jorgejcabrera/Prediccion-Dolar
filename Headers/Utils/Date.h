@@ -23,6 +23,7 @@ class Date {
 		int getDay();
 		int getMonth();
 		int getYear();
+		double getDate();
 		string toString();
 		int toInteger();
 		float toFloat();

@@ -17,3 +17,4 @@ Luego en caso de trabajar con eclipse, agregamos la librería en el linker
 Eclipse
 	Projects -> Properties -> C/C++ Build -> Settings -> GCC C++ Linker -> Libraries -> add -> mgl
 ```
+Los datos de la evolución del precio del dólar fueron provistos por http://www.infomercados.com/index.aspx .
